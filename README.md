@@ -2,8 +2,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Description Project
 
-Imersão React from Alura
-projeto "diflix" que lista os vídeos mais acessados e vistos por Diego Gomes
+React Immersion from Alura
+"diflix" project that lists the most accessed and viewed videos by Diego Gomes
 
 ## Available Scripts
 
