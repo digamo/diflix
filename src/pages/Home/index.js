@@ -10,7 +10,7 @@ function Home() {
   const [dadosIniciais, setDadosIniciais] = useState([]);
 
   useEffect(() => {
-    // http://localhost:8080/categorias?_embed=videos
+    //http://localhost:8080/categorias?_embed=videos
     categoriasRepository.getAllWithVideos()
       .then((categoriasComVideos) => {
         console.log(categoriasComVideos[0].videos[0]);
@@ -75,7 +75,8 @@ function Home() {
 
       <Carousel
         category={dadosIniciais.categorias[4]}
-      /> */}
+      /> */
+      }
     </PageDefault>
   );
 }
