@@ -19,7 +19,7 @@ function CadastroCategoria() {
     const URL = window.location.hostname.includes('localhost')
     ? 'http://localhost:8080/categorias'
     : 'https://diflix.herokuapp.com/categorias';
-    console.log('teste1');
+
     fetch(URL)
       .then(async (respostaDoServidor) => {
         const resposta = await respostaDoServidor.json();
@@ -27,7 +27,6 @@ function CadastroCategoria() {
           ...resposta,
         ]);
       });
-      console.log('teste2');
   }, []);
 
   return (
