@@ -4,12 +4,13 @@
 
 <p align="center">
   <img alt="npm version" src="https://img.shields.io/badge/npm-6.4.1-brightgreen">
+  <img alt="GitHub language count" src="https://img.shields.io/badge/javascript-86.7%25-brightgreen">
   <img alt="Created Diego Gomes" src="https://img.shields.io/badge/created%20by-Diego%20Gomes-brightgreen">
   </a>
 </p>
 
 ## :books: About
-<p>Diflix Project. Web application using ReactJS </p>
+<p>Diflix Project - Web application using ReactJS with the list of the most accessed videos by Diego Gomes</p>
 <p>#ImmersionReact by Alura.<p>
 
 
