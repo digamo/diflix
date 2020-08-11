@@ -10,41 +10,45 @@ import categoriasRepository from '../../../repositories/categorias';
 function CadastroVideo() {
   const history = useHistory();
   const [categorias, setCategorias] = useState([]);
+
   const categoryTitles = categorias.map(({ titulo }) => titulo);
+
   const { handleChange, values } = useForm({
-    titulo: 'Video padrão',
-    url: 'https://www.youtube.com/watch?v=jOAU81jdi-c',
+    titulo: 'Default Video',
+    url: 'https://www.youtube.com/watch?v=ROeA2H-EQ6w',
     categoria: 'Front End',
   });
 
   useEffect(() => {
-    categoriasRepository
-      .getAll()
-      .then((categoriasFromServer) => {
-        setCategorias(categoriasFromServer);
-      });
+    categoriasRepository.getAll().then(categoriesFromServe => {
+      setCategorias(categoriesFromServe);
+    });
   }, []);
 
   return (
     <PageDefault>
-      <h1>Cadastro de Video</h1>
+      <h1>Cadastro de Vídeo</h1>
 
-      <form onSubmit={(event) => {
-        event.preventDefault();
+      <form
+        onSubmit={event => {
+          event.preventDefault();
 
-        const categoriaEscolhida = categorias.find((categoria) => {
-          return categoria.titulo === values.categoria;
-        });
-
-        videosRepository.create({
-          titulo: values.titulo,
-          url: values.url,
-          categoriaId: categoriaEscolhida.id,
-        })
-          .then(() => {
-            history.push('/');
+          const categorySelected = categorias.find(categoria => {
+            return categoria.titulo === values.categoria;
           });
-      }}
+
+          console.log(categorySelected);
+
+          videosRepository
+            .create({
+              titulo: values.titulo,
+              url: values.url,
+              categoriaId: 1,
+            })
+            .then(() => {
+              history.push('/');
+            });
+        }}
       >
         <FormField
           label="Título do Vídeo"
@@ -61,27 +65,17 @@ function CadastroVideo() {
         />
 
         <FormField
-          label="Categoria"
+          label="Categorias"
           name="categoria"
           value={values.categoria}
           onChange={handleChange}
           suggestions={categoryTitles}
         />
 
-        <Button type="submit">
-          Cadastrar
-        </Button>
+        <Button type="submit">Cadastrar</Button>
       </form>
 
-      <br />
-      <br />
-
-{/*  
-    <Link to="/cadastro/categoria">  
-        Cadastrar Categoria
-      </Link>
- */}
-
+      <Link to="/cadastro/Categoria">Cadastrar Categoria</Link>
     </PageDefault>
   );
 }

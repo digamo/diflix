@@ -1,29 +1,27 @@
 import config from '../config';
 
-const URL_CATEGORIES = `${config.URL_BACKEND_TOP}/categorias`;
+const URL_CATEGORIES = `${config.URL_BACKEND}/categorias`;
 
 function getAll() {
-  return fetch(`${URL_CATEGORIES}`)
-    .then(async (respostaDoServidor) => {
-      if (respostaDoServidor.ok) {
-        const resposta = await respostaDoServidor.json();
-        return resposta;
-      }
+  return fetch(`${URL_CATEGORIES}?_embed=videos`).then(async responseServer => {
+    if (responseServer.ok) {
+      const response = await responseServer.json();
+      return response;
+    }
 
-      throw new Error('Não foi possível pegar os dados :(');
-    });
+    throw new Error('Não foi possível pegar os dados :(');
+  });
 }
 
 function getAllWithVideos() {
-  return fetch(`${URL_CATEGORIES}?_embed=videos`)
-    .then(async (respostaDoServidor) => {
-      if (respostaDoServidor.ok) {
-        const resposta = await respostaDoServidor.json();
-        return resposta;
-      }
+  return fetch(`${URL_CATEGORIES}?_embed=videos`).then(async responseServer => {
+    if (responseServer.ok) {
+      const response = await responseServer.json();
+      return response;
+    }
 
-      throw new Error('Não foi possível pegar os dados :(');
-    });
+    throw new Error('Não foi possível pegar os dados :(');
+  });
 }
 
 export default {
