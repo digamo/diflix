@@ -16,7 +16,7 @@ function CadastroVideo() {
   const { handleChange, values } = useForm({
     titulo: 'Default Video',
     url: 'https://www.youtube.com/watch?v=ROeA2H-EQ6w',
-    categoria: 'Front End',
+    categoria: 'Javascript',
   });
 
   useEffect(() => {
@@ -75,7 +75,6 @@ function CadastroVideo() {
         <Button type="submit">Cadastrar</Button>
       </form>
 
-      <Link to="/cadastro/Categoria">Cadastrar Categoria</Link>
     </PageDefault>
   );
 }
