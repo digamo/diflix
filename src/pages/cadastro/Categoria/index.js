@@ -17,7 +17,8 @@ function CadastroCategoria() {
   const [categorias, setCategorias] = useState([]);
 
   useEffect(() => {
-    const URL_TOP = window.location.hostname.includes('localhost');
+    const URL_TOP = 'http://localhost:8080/categorias';
+
     fetch(URL_TOP)
       .then(async (respostaDoServidor) => {
         const resposta = await respostaDoServidor.json();
@@ -26,23 +27,6 @@ function CadastroCategoria() {
         ]);
       });
 
-    // setTimeout(() => {
-    //   setCategorias([
-    //     ...categorias,
-    //     {
-    //       id: 1,
-    //       nome: 'Front End',
-    //       descricao: 'Uma categoria bacanudassa',
-    //       cor: '#cbd1ff',
-    //     },
-    //     {
-    //       id: 2,
-    //       nome: 'Back End',
-    //       descricao: 'Outra categoria bacanudassa',
-    //       cor: '#cbd1ff',
-    //     },
-    //   ]);
-    // }, 4 * 1000);
   }, []);
 
   return (
@@ -93,7 +77,7 @@ function CadastroCategoria() {
 
       {categorias.length === 0 && (
         <div>
-          {/* Cargando... */}
+          {/* Carregando... */}
           Loading...
         </div>
       )}
@@ -106,9 +90,6 @@ function CadastroCategoria() {
         ))}
       </ul>
 
-      <Link to="/">
-        Ir para home
-      </Link>
     </PageDefault>
   );
 }

@@ -17,14 +17,25 @@ const Container = styled.ul`
     transform: initial;
     &:before {
       font-size: 30px;
+      color: ${props => props.color};
     }
   }
-  
+
   .slick-prev {
     left: 0;
   }
   .slick-next {
     right: 16px;
+  }
+  .slick-slide {
+    transition: 0.8s;
+  }
+  .slick-slide:hover {
+    transform: scale(1.2);
+    order: 10;
+    z-index: 10;
+    margin: 0 2em;
+    transition: 0.5s;
   }
 `;
 
@@ -38,17 +49,18 @@ export const SliderItem = styled.li`
   }
 `;
 
-
 const Slider = ({ children }) => (
   <Container>
-    <SlickSlider {...{
-      dots: false,
-      infinite: false,
-      speed: 300,
-      centerMode: false,
-      variableWidth: true,
-      adaptiveHeight: true,
-    }}
+    <SlickSlider
+      {...{
+        dots: true,
+        infinite: true,
+        speed: 300,
+        centerMode: false,
+        variableWidth: true,
+        adaptiveHeight: true,
+        accessibility: true,
+      }}
     >
       {children}
     </SlickSlider>
