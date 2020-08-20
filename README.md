@@ -9,12 +9,12 @@
   </a>
 </p>
 
-## :books: About
+## 📖 About
 <p>Diflix Project - Web application using ReactJS with the list of the most accessed videos by Diego Gomes</p>
 <p>#ImmersionReact by Alura.<p>
 
 
-## Technology</h3>
+## 🚀 Technology
 <ul>
     <li><a href="https://reactjs.org/" target="_blank">React</a></li>
     <li><a href="https://reactrouter.com/" target="_blank">React Route</a></li>
@@ -24,14 +24,26 @@
 </ul>
 
 
-## :information_source: How To Use
+## ⌨ How To Use
 
-### *[NPM](https://www.npmjs.com/)*
-```sh
-npm install
-npm run dev
+### Run Web Project
+
+```bash
+
+# Go to project folder
+
+# Install Dependencies
+$ npm install
+
+# Run Aplication
+$ npm run dev
+
 ```
+Access url: `http://localhost:3000/`
 
+## :memo: License
 
-<p>Developed <a href='https://github.com/digamo/' target='blank'>Diego Gomes</a></p>
+MIT License - [LICENSE](https://opensource.org/licenses/MIT)
+
+<p>Developed by <a href='https://github.com/digamo/' target='blank'>Diego Gomes</a></p>
 
