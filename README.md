@@ -10,9 +10,10 @@
 </p>
 
 ## 📖 About
-<p>Diflix Project - Web application using ReactJS with the list of the most accessed videos by Diego Gomes</p>
-<p>#ImmersionReact by Alura.<p>
+<p>Diflix Project - Web application using ReactJS with the list of the most accessed videos by Diego Gomes.</p>
+<p>#ImmersionReact by Alura.</p>
 
+<p>Take a look: https://diflix.vercel.app/ </p>
 
 ## 🚀 Technology
 <ul>
