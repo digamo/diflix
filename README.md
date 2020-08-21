@@ -10,7 +10,7 @@
 </p>
 
 ## 📖 About
-<p>Diflix Project - Web application using ReactJS with the list of the most accessed videos by Diego Gomes.</p>
+<p>Diflix Project - Web application using ReactJS, reproducing Netflix layout, with the list of the most accessed videos by Diego Gomes. The list of videos is accessed from Json published on the Heroku website.</p>
 <p>#ImmersionReact by Alura.</p>
 
 <p><a href="https://diflix.vercel.app/" target="_blank">Take a look!</a></p>
